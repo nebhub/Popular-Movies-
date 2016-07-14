@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_movie_detail"
+    tools:context="com.example.android.popularmoviesstage1.MovieDetailActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:fillViewport="true">
+<RelativeLayout
+     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:id="@+id/movie_poster_detail"
+        android:layout_width="@dimen/image_width_small"
+        android:layout_height="@dimen/image_height_small" />
+
+    <TextView
+        android:id="@+id/movie_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/movie_poster_detail"
+        android:paddingLeft="@dimen/padding_small"
+        style="@style/primary_text"
+       />
+    <TextView
+        android:id="@+id/movie_user_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/movie_title"
+        android:layout_toRightOf="@id/movie_poster_detail"
+        android:paddingLeft="@dimen/padding_small"/>
+    <TextView
+        android:id="@+id/movie_releaseDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/movie_user_rating"
+        android:layout_toRightOf="@id/movie_poster_detail"
+        android:paddingLeft="@dimen/padding_small"/>
+    <TextView
+        android:id="@+id/movie_plot_synopsis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/movie_poster_detail"
+        android:layout_alignParentLeft="true"
+        android:paddingTop="@dimen/padding_small"
+        style="@style/seconday_text"
+        />
+
+
+
+
+</RelativeLayout>
+</ScrollView>

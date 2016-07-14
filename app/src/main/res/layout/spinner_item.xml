@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+
+    android:id="@android:id/text1"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/spinner_height"
+    android:drawablePadding="@dimen/spinner_drawable_padding"
+    android:gravity="center_vertical|start"
+    android:paddingLeft="@dimen/spinner_padding"
+    android:paddingRight="@dimen/spinner_padding"
+    android:textColor="@color/secondary_dark"
+    android:textSize="@dimen/secondary_text"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

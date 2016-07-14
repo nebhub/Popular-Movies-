@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Items displayed inside the spinner -->
+    <string-array name="movie_sort_order_tags">
+        <item name="popular">Popular</item>
+        <item name="top_rated">Top Rated</item>
+    </string-array>
+
+<!-- Actual values that are appended to the URL -->
+    <string-array name="movie_sort_order_values">
+        <item name="popular">popular</item>
+        <item name="top_rated">top_rated</item>
+    </string-array>
+</resources>

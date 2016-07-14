@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">PopularMoviesStage1</string>
+
+    <string name="movie_db_base_url">https://api.themoviedb.org/3/movie</string>
+    <string name="movie_db_param_api_key">api_key</string>
+
+    <string name = "api_poster_base_url">http://image.tmdb.org/t/p/</string>
+    <string name = "api_poster_size_default">w154</string>
+
+    <!-- JSON tags -->
+    <string name="api_tag_results">results</string>
+    <string name="api_tag_overview">"overview"</string>
+    <string name="api_tag_original_title">original_title</string>
+    <string name="api_tag_poster_path">poster_path</string>
+    <string name="api_tag_release_date">release_date</string>
+    <string name="api_tag_vote_average">vote_average</string>
+    <string name="title_activity_movie_detail">MovieDetailActivity</string>
+
+    <string name="progress_dialog_title">Loading Movies</string>
+    <string name="progress_dialog_message">Please Wait...</string>
+    <string name="extra_key_movies">com.example.android.popularmoviesstage1.MOVIES</string>
+</resources>
