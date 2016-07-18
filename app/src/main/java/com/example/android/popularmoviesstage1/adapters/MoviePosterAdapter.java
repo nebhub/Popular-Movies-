@@ -1,4 +1,4 @@
-package com.example.android.popularmoviesstage1;
+package com.example.android.popularmoviesstage1.adapters;
 
 
 import android.content.Context;
@@ -7,17 +7,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+
+import com.example.android.popularmoviesstage1.models.Movie;
+import com.example.android.popularmoviesstage1.R;
 import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
-
 public class MoviePosterAdapter extends BaseAdapter {
-
 
     private Context context;
     private ArrayList<Movie> movieList;
 
-    public MoviePosterAdapter(Context context, ArrayList<Movie> movieList){
+    public MoviePosterAdapter(Context context, ArrayList<Movie> movieList) {
         this.context = context;
         this.movieList = movieList;
     }
@@ -37,7 +39,7 @@ public class MoviePosterAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        if (movieList == null){
+        if (movieList == null) {
             return 0;
         }
         return movieList.size();
@@ -51,19 +53,31 @@ public class MoviePosterAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        if (convertView==null){
+        ViewHolder viewHolder;
+
+        if (convertView == null) {
             convertView = LayoutInflater.from(context).inflate(R.layout.grid_item, parent, false);
+
+            viewHolder = new ViewHolder();
+            viewHolder.moviePoster = (ImageView) convertView.findViewById(R.id.movie_poster);
+
+            convertView.setTag(viewHolder);
+        }
+        else {
+            viewHolder = (ViewHolder)convertView.getTag();
         }
 
-        ImageView moviePoster = (ImageView)convertView.findViewById(R.id.movie_poster);
-        if (movieList!=null) {
+        if (movieList != null) {
             Picasso.with(context).load(movieList.get(position).getPosterUrl()).fit()
-                    .into(moviePoster);
+                    .into(viewHolder.moviePoster);
         }
-
-
-
 
         return convertView;
+    }
+
+    public static class ViewHolder {
+
+        public ImageView moviePoster;
+
     }
 }

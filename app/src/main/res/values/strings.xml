@@ -16,7 +16,12 @@
     <string name="api_tag_vote_average">vote_average</string>
     <string name="title_activity_movie_detail">MovieDetailActivity</string>
 
+    <!-- Progress Bar -->
     <string name="progress_dialog_title">Loading Movies</string>
     <string name="progress_dialog_message">Please Wait...</string>
     <string name="extra_key_movies">com.example.android.popularmoviesstage1.MOVIES</string>
+
+    <!-- Toast Messages -->
+    <string name="message_no_internet">No internet connection</string>"
+    <string name="message_no_data">No Data</string>
 </resources>

@@ -1,18 +1,17 @@
-package com.example.android.popularmoviesstage1;
+package com.example.android.popularmoviesstage1.models;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 
-
 public class Movie implements Parcelable {
 
     private String posterUrl;
-    private String OriginalTitle;
+    private String originalTitle;
     private String plotSynopsis;
     private String userRating;
     private String releaseDate;
 
-    public Movie(){
+    public Movie() {
 
     }
 
@@ -25,11 +24,11 @@ public class Movie implements Parcelable {
     }
 
     public String getOriginalTitle() {
-        return OriginalTitle;
+        return originalTitle;
     }
 
     public void setOriginalTitle(String originalTitle) {
-        OriginalTitle = originalTitle;
+        this.originalTitle = originalTitle;
     }
 
     public String getPlotSynopsis() {
@@ -58,7 +57,7 @@ public class Movie implements Parcelable {
 
     protected Movie(Parcel in) {
         posterUrl = in.readString();
-        OriginalTitle = in.readString();
+        originalTitle = in.readString();
         plotSynopsis = in.readString();
         userRating = in.readString();
         releaseDate = in.readString();
@@ -72,7 +71,7 @@ public class Movie implements Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(posterUrl);
-        dest.writeString(OriginalTitle);
+        dest.writeString(originalTitle);
         dest.writeString(plotSynopsis);
         dest.writeString(userRating);
         dest.writeString(releaseDate);
